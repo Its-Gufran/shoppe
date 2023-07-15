@@ -7,11 +7,11 @@ import authRoutes from './routes/authRoute.js'
 //dotenv config
 dotenv.config(); //path of env file can be added in {}
 
-//rest object
-const app = express();
-
 //database config
 connectDB();
+
+//rest object
+const app = express();
 
 //middlewares
 app.use(express.json())
