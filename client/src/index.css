@@ -113,6 +113,16 @@
   justify-content: center;
 }
 
+/* register page */
+/* .register{
+
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+} */
+
 /* ==================== */
 .product-link {
   text-decoration: none !important;
