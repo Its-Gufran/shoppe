@@ -1,10 +1,11 @@
 import JWT from 'jsonwebtoken';
 import userModel from '../models/userModel.js';
 
-//Protect Routes token from base
+//Protect Routes token base
 export const requireSignIn = async(req,res,next) => {
     try{
         const decode = JWT.verify(req.headers.authorization, process.env.JWT_SECRET);
+        //passing deccode to user so that when checking for admin, We can access role
         req.user = decode;
         next();
     }catch(error)

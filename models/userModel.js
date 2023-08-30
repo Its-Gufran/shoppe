@@ -33,6 +33,7 @@ const userSchema = new mongoose.Schema(
       default: 0,
     },
   },
+  //when the new user user will be added, his/her timestamp will be added
   { timestamps: true }
 );
 

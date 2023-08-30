@@ -8,16 +8,17 @@ import cors from "cors"
 import categoryRoute from "./routes/categoryRoute.js";
 import productRoutes from "./routes/productRoutes.js";
 //dotenv config
-dotenv.config(); //path of env file can be added in {}
+dotenv.config(); //path of env file can be added in {} but have it .dotenv file in root folder so we don't need to give the path.
 
 //database config
 connectDB();
-
-//rest object
+  
+//rest object (instance of an express application)
 const app = express();
 
 //middlewares
 app.use(cors())
+//we will send json in req and res
 app.use(express.json())
 app.use(morgan('dev'))
 
